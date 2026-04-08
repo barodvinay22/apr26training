@@ -7,9 +7,10 @@ class InsufficentBalanceException extends RuntimeException{
 
 }
 class SavingAccount{
-    private int accountNumber;
-    private int balance;
+    private int accountNumber; //aNumber;
+    private int balance;//b
     public int withdraw(int balance)throws InsufficentBalanceException{
+        log.debug("")
         if(this.balance<1000){
             throw new InsufficentBalanceException("Money is less than 1000");
         }
