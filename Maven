@@ -1,1 +1,103 @@
 // Maven --> Build Tools
+Apache 
+
+Maven Lifecycle
+validate(Check Project structure)--> compile(Compile Source Code)--> test(Run unit tests Junit/TestNG)
+--> package(Create JAR/WAR) --> verify--> install(Store in local repo)--> deploy(Upload to remote repo)
+mvn clean 
+mvn install
+mvn package
+
+
+src--> java-->JavaSourceCode
+        test--> javaTestCode
+pom.xml --> All the dependencies 
+
+maven
+xml
+
+<dependencies>
+    <dependency>
+        <groupId></groupId>
+        <artifactId></artifactId>
+        <version></version>
+        <scope></scope>
+    </dependency>
+</dependencies>
+
+
+<dependency>
+    <groupId>com.oracle.database.jdbc</groupId>
+    <artifactId>ojdbc17</artifactId>
+    <version>23.6.0.24.10</version> <!-- Check for latest version -->
+</dependency>
+
+Build pipelines(CI/CD):
+
+
+Logging and code Quality:
+
+Recording Application events(erros, info, debug) to:
+Debug issues
+Monitor production systems
+Audit behaviour
+
+Popular Logging frameworks:
+* log4f
+* slf4J
+* Logback
+
+Log Levels
+
+Level  Use Case
+ERROR  Critical failures
+WARN  Something suspicious
+INFO  Normal Flow
+DEBUG Detailed debugging
+TRACE Very Granular logs
+
+Code Quality(Clean & Maintainable Code):
+Clean code : Meaningful varibale names
+Small Methods: 
+Single Reponsibility Principle(SOLID Principles)
+
+
+Code Quality Tools:
+SonarQube
+Checksystle
+PMD
+
+Spring Framework: Lightweight Framework(Web, backend, enterprise).
+
+Spring --> Manages Object/Bean creation automatically 
+
+Employee-->
+
+new Employee();
+
+Main{
+
+    Employee e =new Employee();
+}
+
+Main{
+    @Autowired
+    Employee e;
+}
+
+Car{
+    Engine engine=new Engine();
+}
+Car{
+    Engine engine;
+    Car(Engine engine){
+        this.engine=engine;
+    }
+}
+
+Key Modules in Spring:
+
+Spring Core--> DI, Ioc Container.
+Spring AOP--> Logging
+Spring MVC--> Web Application
+Spring Data--> Database handling
